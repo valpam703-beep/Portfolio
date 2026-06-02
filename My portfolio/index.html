@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pamela Atieno Gor</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&family=Raleway:wght@300;400;500;600;700;800;900&family=Mulish:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            roboto: ['Roboto', 'sans-serif'],
+            raleway: ['Raleway', 'sans-serif'],
+            mulish: ['Mulish', 'sans-serif'],
+          },
+          colors: {
+            accent: 'purple',
+            'accent-dim': 'purple',
+            'dark-bg': '#0d0d0d',
+            'dark-surface': '#141414',
+            'dark-card': '#1a1a1a',
+            'dark-border': 'rgba(255,255,255,0.07)',
+            'light-bg': '#f0f7f0',
+            'light-surface': '#ffffff',
+            'light-card': '#eaf5ea',
+            'light-border': 'rgba(0,0,0,0.08)',
+          },
+          boxShadow: {
+            'purple-glow': '0 0 20px rgba(57,255,20,0.25)',
+            'purple-glow-lg': '0 0 40px rgba(57,255,20,0.3)',
+          }
+        }
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+
+<!-- ══ PRELOADER ══ -->
+<div id="preloader"><div class="ring"></div></div>
+
+<!-- ══ HEADER ══ -->
+<header id="header" class="nav-bg fixed top-0 left-0 right-0 z-50 py-4">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="#hero" class="sitename text-2xl font-black font-mulish tracking-tight">PAG</a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden xl:flex items-center gap-8 nav-font">
+      <a href="#hero"     class="nav-link active">Home</a>
+      <a href="#about"    class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#resume"   class="nav-link">Education</a>
+      <a href="#contact"  class="nav-link">Contact</a>
+    </nav>
+
+    <!-- Right: theme toggle + CTA + mobile hamburger -->
+    <div class="flex items-center gap-4">
+      <!-- Theme toggle -->
+      <div class="theme-toggle" id="themeToggle" title="Toggle theme">
+        <div class="theme-toggle-thumb"></div>
+      </div>
+
+      <!-- CTA (desktop) -->
+      <a href="#about" class="hidden xl:inline-block btn-primary-accent px-6 py-2 text-sm font-raleway">
+        Get Started
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button id="mobileToggle" class="xl:hidden text-2xl heading-text" aria-label="Menu">
+        <i class="bi bi-list" id="menuIcon"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="xl:hidden absolute top-full left-0 right-0 rounded-b-2xl mx-4 p-4 shadow-xl">
+    <nav class="flex flex-col gap-2 nav-font">
+      <a href="#hero"     class="nav-link py-2 border-b border-white/5">Home</a>
+      <a href="#about"    class="nav-link py-2 border-b border-white/5">About</a>
+      <a href="#services" class="nav-link py-2 border-b border-white/5">Services</a>
+      <a href="#resume"   class="nav-link py-2 border-b border-white/5">Education</a>
+      <a href="#contact"  class="nav-link py-2">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══ HERO ══ -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden section-bg">
+    <canvas id="space-canvas"></canvas>
+    
+  <!-- Radial glow -->
+  <div class="absolute inset-0" style="background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(57,255,20,0.06) 0%, transparent 70%);"></div>
+
+  <div class="hero-overlay absolute inset-0"></div>
+
+  <div class="relative z-10 text-center px-4 max-w-4xl mx-auto pt-24 pb-16">
+    <div data-aos="fade-down" data-aos-duration="800">
+      <span class="inline-block px-4 py-1 rounded-full text-xs font-semibold font-raleway tracking-widest uppercase mb-6 text-accent/90 border border-accent/30 bg-accent/5">
+        Innovation· Technology & Creativity
+      </span>
+    </div>
+    <h2 class="text-4xl sm:text-6xl font-black font-mulish mb-4 heading-text" data-aos="fade-up" data-aos-delay="100">
+      Hi, I'm <span class="text-accent" style="text-shadow: 0 0 30px #a0008b;">Pamela</span> 
+    </h2>
+    <p class="text-xl sm:text-2xl mb-10 body-text" data-aos="fade-up" data-aos-delay="200">
+      I'm a <span class="typed text-accent border-b-2 border-accent pb-0.5" data-typed-items="Web Developer,System Designer,Problem Solver,CS Student,Tech Enthusiast"></span><span class="typed-cursor text-accent" aria-hidden="true"></span>
+    </p>
+    <div class="flex justify-center gap-4 mb-10" data-aos="fade-up" data-aos-delay="300">
+      <a href="#about" class="btn-primary-accent px-8 py-3 font-mulish text-sm">Explore Profile</a>
+      <a href="#contact" class="btn-outline-accent px-8 py-3 font-mulish text-sm">Get In Touch</a>
+    </div>
+    <!-- Social links -->
+    <div class="flex justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
+      <a href="https://github.com/valpam703-beep/E-portfolio" class="w-12 h-12 rounded-full flex items-center justify-center text-lg body-text border border-white/10 hover:bg-accent hover:text-black hover:border-accent hover:-translate-y-1 transition-all duration-300"><i class="bi bi-github"></i></a>
+      <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center text-lg body-text border border-white/10 hover:bg-accent hover:text-black hover:border-accent hover:-translate-y-1 transition-all duration-300"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center text-lg body-text border border-white/10 hover:bg-accent hover:text-black hover:border-accent hover:-translate-y-1 transition-all duration-300"><i class="bi bi-twitter-x"></i></a>
+      <a href="mailto:Valpam703@gmail.com" class="w-12 h-12 rounded-full flex items-center justify-center text-lg body-text border border-white/10 hover:bg-accent hover:text-black hover:border-accent hover:-translate-y-1 transition-all duration-300"><i class="bi bi-envelope-fill"></i></a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce">
+    <span class="text-xs font-raleway muted-text text-accent/900 tracking-widest">SCROLL</span>
+    <i class="bi bi-chevron-down text-accent"></i>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section id="about" class="section-alt py-24 overflow-hidden relative">
+  <div class="absolute top-0 right-0 w-96 h-96 rounded-full opacity-5"
+    style="background: radial-gradient(circle, #d800c6, transparent); transform: translate(30%, -30%);"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <!-- Section title -->
+    <div class="text-center mb-16" data-aos="fade-up">
+      <span class="inline-block text-accent text-xs font-semibold tracking-widest uppercase font-raleway subtitle-line mb-6">About Me</span>
+      <h2 class="text-4xl sm:text-5xl font-black font-mulish heading-text font-light">About <span class="font-black">Me</span></h2>
+      <p class="mt-4 text-base leading-relaxed max-w-2xl mx-auto body-text">
+        Computer Science student at Moi University passionate about building secure systems and elegant web experiences.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <!-- Profile card (col 4) -->
+      <div class="lg:col-span-4" data-aos="zoom-in" data-aos-delay="150">
+        <div class="card-surface rounded-3xl p-8 sticky top-28">
+          <!-- Avatar -->
+          <div class="text-center pb-8 border-b border-white/5">
+            <div class="avatar-ring  mb-5 relative">
+                <img src="images/image.png" alt="">
+            </div>
+            <h3 class="text-xl font-black font-mulish heading-text">Pamela</h3>
+            <span class="text-accent text-sm font-semibold font-raleway">Computer science Student · Moi University</span>
+            <div class="flex items-center justify-center gap-1 mt-3">
+              <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+              <i class="bi bi-star-fill text-yellow-400 text-sm"></i>
+              <i class="bi bi-star-half text-yellow-400 text-sm"></i>
+              <span class="ml-1 text-sm font-semibold body-text">4.8</span>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-4 py-6 border-b border-white/5 text-center">
+            <div>
+              <div class="text-2xl font-black text-accent font-mulish">2+</div>
+              <div class="text-xs muted-text uppercase tracking-wider mt-1">Projects</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-accent font-mulish">2023</div>
+              <div class="text-xs muted-text uppercase tracking-wider mt-1">Started</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-accent font-mulish">CS</div>
+              <div class="text-xs muted-text uppercase tracking-wider mt-1">Major</div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="flex flex-col gap-3 py-6 border-b border-white/5">
+            <a href="#resume" class="btn-primary-accent flex items-center justify-center gap-2 py-3 text-sm">
+              <i class="bi bi-file-earmark-person"></i> View Resume
+            </a>
+            <a href="#contact" class="btn-outline-accent flex items-center justify-center gap-2 py-3 text-sm">
+              <i class="bi bi-envelope"></i> Contact Me
+            </a>
+          </div>
+
+          <!-- Social -->
+          <div class="flex justify-center gap-3 pt-6">
+            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center bg-white/5 heading-text hover:bg-accent/40 hover:text-black transition-all duration-300"><i class="bi bi-github"></i></a>
+            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center bg-white/5 heading-text hover:bg-accent/40 hover:text-black transition-all duration-300"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center bg-white/5 heading-text hover:bg-accent/40 hover:text-black transition-all duration-300"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content (col 8) -->
+      <div class="lg:col-span-8">
+        <!-- Bio -->
+        <div class="mb-12" data-aos="fade-left" data-aos-delay="200">
+          <span class="inline-block px-4 py-1 rounded-full text-xs font-bold text-accent bg-accent/10 font-raleway uppercase tracking-wider mb-4">Professional Bio</span>
+          <h2 class="text-2xl sm:text-3xl font-black font-mulish heading-text mb-6">Building Secure, Elegant Digital Systems</h2>
+          <p class="body-text leading-relaxed mb-4">
+            I am a driven Computer Science student at Moi University with a passion for system development, web technologies, and cybersecurity fundamentals. My academic journey has equipped me with practical skills in building scalable applications with robust security architectures.
+          </p>
+          <p class="body-text leading-relaxed">
+            I thrive at the intersection of clean code and user-centered design — crafting systems that are not only technically sound but genuinely delightful to use. I actively seek opportunities to apply my knowledge on real-world problems.
+          </p>
+        </div>
+
+        <!-- Details grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+          <div class="detail-card card-surface rounded-2xl p-5 flex items-center gap-4" data-aos="fade-up" data-aos-delay="250">
+            <i class="bi bi-mortarboard text-accent text-3xl flex-shrink-0"></i>
+            <div>
+              <span class="text-xs muted-text uppercase tracking-wider block">University</span>
+              <strong class="heading-text font-semibold text-sm">Moi University — BSc. Computer Science</strong>
+            </div>
+          </div>
+          <div class="detail-card card-surface rounded-2xl p-5 flex items-center gap-4" data-aos="fade-up" data-aos-delay="280">
+            <i class="bi bi-geo-alt text-accent text-3xl flex-shrink-0"></i>
+            <div>
+              <span class="text-xs muted-text uppercase tracking-wider block">Based In</span>
+              <strong class="heading-text font-semibold text-sm">Kenya</strong>
+            </div>
+          </div>
+          <div class="detail-card card-surface rounded-2xl p-5 flex items-center gap-4" data-aos="fade-up" data-aos-delay="310">
+            <i class="bi bi-envelope text-accent text-3xl flex-shrink-0"></i>
+            <div>
+              <span class="text-xs muted-text uppercase tracking-wider block">Email</span>
+              <strong class="heading-text font-semibold text-sm">Valpam703@gmail.com</strong>
+            </div>
+          </div>
+          <div class="detail-card card-surface rounded-2xl p-5 flex items-center gap-4" data-aos="fade-up" data-aos-delay="340">
+            <i class="bi bi-phone text-accent text-3xl flex-shrink-0"></i>
+            <div>
+              <span class="text-xs muted-text uppercase tracking-wider block">Phone</span>
+              <strong class="heading-text font-semibold text-sm">0799 631 645</strong>
+            </div>
+          </div>
+          <div class="detail-card card-surface rounded-2xl p-5 flex items-center gap-4" data-aos="fade-up" data-aos-delay="370">
+            <i class="bi bi-briefcase text-accent text-3xl flex-shrink-0"></i>
+            <div>
+              <span class="text-xs muted-text uppercase tracking-wider block">Focus</span>
+              <strong class="heading-text font-semibold text-sm">System Dev & Web Technology</strong>
+            </div>
+          </div>
+          <div class="detail-card card-surface rounded-2xl p-5 flex items-center gap-4" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-calendar-check text-accent text-3xl flex-shrink-0"></i>
+            <div>
+              <span class="text-xs muted-text uppercase tracking-wider block">Availability</span>
+              <strong class="heading-text font-semibold text-sm">Open to Internships & Roles</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="skills-animation" data-aos="fade-up" data-aos-delay="250">
+          <span class="inline-block px-4 py-1 rounded-full text-xs font-bold text-accent bg-accent/10 font-raleway uppercase tracking-wider mb-4">Core Competencies</span>
+          <h3 class="text-2xl font-black font-mulish heading-text mb-8">Technical Skillset</h3>
+          <div class="space-y-6">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-sm font-semibold heading-text">Web Development</span>
+                <span class="text-sm font-bold text-accent">80%</span>
+              </div>
+              <div class="progress-track"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-sm font-semibold heading-text">System Development</span>
+                <span class="text-sm font-bold text-accent">85%</span>
+              </div>
+              <div class="progress-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-sm font-semibold heading-text">User Authentication & Security</span>
+                <span class="text-sm font-bold text-accent">78%</span>
+              </div>
+              <div class="progress-track"><div class="skill-bar-fill" data-width="78"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-sm font-semibold heading-text">Problem Solving & Debugging</span>
+                <span class="text-sm font-bold text-accent">90%</span>
+              </div>
+              <div class="progress-track"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RESUME ══ -->
+<section id="resume" class="section-bg py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <!-- Title -->
+    <div class="text-center mb-16" data-aos="fade-up">
+      <span class="inline-block text-accent text-xs font-semibold tracking-widest uppercase font-raleway subtitle-line mb-6">Resume</span>
+      <h2 class="text-4xl sm:text-5xl font-black font-mulish heading-text font-light">Experience &amp; <span class="font-black">Education</span></h2>
+      <p class="mt-4 text-base max-w-xl mx-auto body-text">An overview of my academic background, personal projects, and the technical skills I've developed along the way.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- Left: Experience / Projects -->
+      <div data-aos="fade-right" data-aos-delay="100">
+        <div class="mb-8">
+          <span class="inline-block px-4 py-1 rounded-full text-xs font-bold text-black bg-accent font-raleway uppercase tracking-wider mb-3">Projects</span>
+          <h2 class="text-2xl font-black font-mulish heading-text">Technical Journey</h2>
+          <p class="body-text text-sm mt-2">Real-world projects and academic work that define my growth as a developer.</p>
+        </div>
+
+        <div class="space-y-5">
+          <!-- Project 1 -->
+          <div class="exp-card card-surface rounded-2xl p-6 border border-white/7 relative overflow-hidden" data-aos="zoom-in" data-aos-delay="200" style="border-color: rgba(57,255,20,0.25);">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-accent-dim flex items-center justify-center">
+                <i class="bi bi-shield-lock-fill text-black text-xl"></i>
+              </div>
+              <span class="text-xs font-bold text-accent bg-accent/10 px-3 py-1 rounded-full">Featured</span>
+            </div>
+            <h3 class="text-lg font-black font-mulish heading-text mb-1">Secure Online System</h3>
+            <p class="text-accent text-sm font-semibold mb-2">Personal Project</p>
+            <span class="text-xs text-black bg-accent/80 px-3 py-0.5 rounded-full font-bold inline-block mb-3">2023 – Present</span>
+            <p class="body-text text-sm leading-relaxed mb-4">
+              Built a secure web-based system with robust user authentication flows. Emphasized data protection, structured access control workflows, and secure session management.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">User Auth</span>
+              <span class="skill-tag">Data Protection</span>
+              <span class="skill-tag">Secure Workflows</span>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="exp-card card-surface rounded-2xl p-6 border border-white/7" data-aos="zoom-in" data-aos-delay="260">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
+                <i class="bi bi-window-split text-accent text-xl"></i>
+              </div>
+            </div>
+            <h3 class="text-lg font-black font-mulish heading-text mb-1">Personal Portfolio Website</h3>
+            <p class="text-accent text-sm font-semibold mb-2">Frontend Project</p>
+            <span class="text-xs text-black bg-accent/80 px-3 py-0.5 rounded-full font-bold inline-block mb-3">2023 – Present</span>
+            <p class="body-text text-sm leading-relaxed mb-4">
+              Designed and built a responsive portfolio site featuring dark/light mode toggle, smooth animations, a project showcase section, and a functional contact form.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">Responsive Design</span>
+              <span class="skill-tag">Animations</span>
+              <span class="skill-tag">Dark/Light Mode</span>
+            </div>
+          </div>
+
+          <!-- Academic -->
+          <div class="exp-card card-surface rounded-2xl p-6 border border-white/7" data-aos="zoom-in" data-aos-delay="320">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
+                <i class="bi bi-people-fill text-accent text-xl"></i>
+              </div>
+            </div>
+            <h3 class="text-lg font-black font-mulish heading-text mb-1">Academic & Group Projects</h3>
+            <p class="text-accent text-sm font-semibold mb-2">Moi University</p>
+            <span class="text-xs text-black bg-accent/80 px-3 py-0.5 rounded-full font-bold inline-block mb-3">2023 – Present</span>
+            <p class="body-text text-sm leading-relaxed mb-4">
+              Collaborated on group assignments applying project management principles, met tight deadlines, and actively debugged, tested, and improved system performance.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">Teamwork</span>
+              <span class="skill-tag">Debugging</span>
+              <span class="skill-tag">Project Mgmt</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Education -->
+      <div data-aos="fade-left" data-aos-delay="100">
+        <div class="mb-8">
+          <span class="inline-block px-4 py-1 rounded-full text-xs font-bold text-black bg-accent font-raleway uppercase tracking-wider mb-3">Education</span>
+          <h2 class="text-2xl font-black font-mulish heading-text">Academic Background</h2>
+          <p class="body-text text-sm mt-2">A strong educational path built on technology, sciences, and critical thinking.</p>
+        </div>
+
+        <div class="relative pl-14" data-aos="fade-up" data-aos-delay="200">
+          <div class="timeline-line"></div>
+
+          <!-- Moi University -->
+          <div class="relative mb-10">
+            <div class="absolute -left-14 top-0 w-12 h-12 rounded-full bg-gradient-to-br from-accent to-accent-dim flex items-center justify-center border-4 shadow-green-glow" style="border-color: #0d0d0d;">
+              <i class="bi bi-mortarboard-fill text-black text-lg"></i>
+            </div>
+            <div class="card-surface rounded-2xl p-6 hover:border-accent/40 hover:translate-x-1 transition-all duration-300 border border-white/5">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <span class="text-xs font-bold text-accent bg-accent/10 px-3 py-1 rounded-full">2023 – Present</span>
+                <span class="text-xs muted-text uppercase tracking-wider font-raleway">Bachelor's Degree</span>
+              </div>
+              <h4 class="text-lg font-black font-mulish heading-text mb-1">BSc. Computer Science</h4>
+              <p class="text-accent text-sm font-semibold mb-3">Moi University, Kenya</p>
+              <p class="body-text text-sm leading-relaxed">
+                Pursuing a Bachelor of Science in Computer Science with focus on software engineering, systems programming, web development, databases, and cybersecurity fundamentals.
+              </p>
+              <div class="mt-4 flex items-center gap-2 bg-accent/5 border border-accent/15 rounded-lg px-4 py-2">
+                <i class="bi bi-cpu text-accent text-sm"></i>
+                <span class="text-xs font-bold text-accent">Core: Algorithms · Databases · Networks · Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ogande Girls -->
+          <div class="relative mb-10">
+            <div class="absolute -left-14 top-0 w-12 h-12 rounded-full bg-accent/10 border-2 border-accent/40 flex items-center justify-center">
+              <i class="bi bi-book text-accent text-lg"></i>
+            </div>
+            <div class="card-surface rounded-2xl p-6 hover:border-accent/40 hover:translate-x-1 transition-all duration-300 border border-white/5">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <span class="text-xs font-bold text-accent bg-accent/10 px-3 py-1 rounded-full">2019 – 2022</span>
+                <span class="text-xs muted-text uppercase tracking-wider font-raleway">Secondary School</span>
+              </div>
+              <h4 class="text-lg font-black font-mulish heading-text mb-1">KCSE Certificate</h4>
+              <p class="text-accent text-sm font-semibold mb-3">Ogande Girls High School</p>
+              <p class="body-text text-sm leading-relaxed">
+                Completed secondary education with strong performance in sciences and mathematics, laying a solid foundation for computer science studies.
+              </p>
+            </div>
+          </div>
+
+          <!-- Primary -->
+          <div class="relative">
+            <div class="absolute -left-14 top-0 w-12 h-12 rounded-full bg-accent/10 border-2 border-accent/30 flex items-center justify-center">
+              <i class="bi bi-pencil text-accent text-lg"></i>
+            </div>
+            <div class="card-surface rounded-2xl p-6 hover:border-accent/40 hover:translate-x-1 transition-all duration-300 border border-white/5">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <span class="text-xs font-bold text-accent bg-accent/10 px-3 py-1 rounded-full">2018</span>
+                <span class="text-xs muted-text uppercase tracking-wider font-raleway">Primary School</span>
+              </div>
+              <h4 class="text-lg font-black font-mulish heading-text mb-1">KCPE Certificate</h4>
+              <p class="text-accent text-sm font-semibold">Our Lady of Nazareth</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section id="services" class="section-alt py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <span class="inline-block text-accent text-xs font-semibold tracking-widest uppercase font-raleway subtitle-line mb-6">Services</span>
+      <h2 class="text-4xl sm:text-5xl font-black font-mulish heading-text font-light">What I <span class="font-black">Offer</span></h2>
+      <p class="mt-4 text-base max-w-xl mx-auto body-text">Technical services rooted in practical CS knowledge — from web development to system design.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Service items -->
+      <div class="service-card card-surface rounded-2xl p-7 text-center" data-aos="zoom-in" data-aos-delay="100">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-3xl transition-all duration-300 group-hover:bg-accent">
+          <i class="bi bi-code-slash"></i>
+        </div>
+        <h4 class="text-lg font-black font-mulish heading-text mb-3">Web Development</h4>
+        <p class="body-text text-sm leading-relaxed mb-5">Building responsive, modern websites and web applications using HTML, CSS, JavaScript, and frameworks.</p>
+        <a href="#resume" class="inline-flex items-center gap-1 text-sm font-bold heading-text hover:text-accent transition-colors font-raleway">Explore <i class="bi bi-arrow-right transition-transform group-hover:translate-x-1"></i></a>
+      </div>
+
+      <div class="service-card card-surface rounded-2xl p-7 text-center relative overflow-hidden" data-aos="zoom-in" data-aos-delay="200" style="border-color: rgba(57,255,20,0.4);">
+        <div class="featured-ribbon">Featured</div>
+        <div class="w-16 h-16 mx-auto mb-5 rounded-xl bg-accent/15 flex items-center justify-center text-accent text-3xl">
+          <i class="bi bi-shield-lock"></i>
+        </div>
+        <h4 class="text-lg font-black font-mulish heading-text mb-3">Secure Systems</h4>
+        <p class="body-text text-sm leading-relaxed mb-5">Designing and implementing systems with user authentication, data protection, and secure access workflows.</p>
+        <a href="#resume" class="inline-flex items-center gap-1 text-sm font-bold text-accent font-raleway">Explore <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card card-surface rounded-2xl p-7 text-center" data-aos="zoom-in" data-aos-delay="300">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-3xl">
+          <i class="bi bi-database"></i>
+        </div>
+        <h4 class="text-lg font-black font-mulish heading-text mb-3">Database Design</h4>
+        <p class="body-text text-sm leading-relaxed mb-5">Structuring efficient databases with well-designed schemas, relationships, and query optimization.</p>
+        <a href="#resume" class="inline-flex items-center gap-1 text-sm font-bold heading-text hover:text-accent transition-colors font-raleway">Explore <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card card-surface rounded-2xl p-7 text-center" data-aos="zoom-in" data-aos-delay="400">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-3xl">
+          <i class="bi bi-bug"></i>
+        </div>
+        <h4 class="text-lg font-black font-mulish heading-text mb-3">Debugging & QA</h4>
+        <p class="body-text text-sm leading-relaxed mb-5">Systematic debugging, testing, and performance improvement for software systems.</p>
+        <a href="#resume" class="inline-flex items-center gap-1 text-sm font-bold heading-text hover:text-accent transition-colors font-raleway">Explore <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card card-surface rounded-2xl p-7 text-center" data-aos="zoom-in" data-aos-delay="100">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-3xl">
+          <i class="bi bi-phone"></i>
+        </div>
+        <h4 class="text-lg font-black font-mulish heading-text mb-3">Responsive UI</h4>
+        <p class="body-text text-sm leading-relaxed mb-5">Crafting mobile-first, responsive interfaces that work beautifully across all screen sizes.</p>
+        <a href="#resume" class="inline-flex items-center gap-1 text-sm font-bold heading-text hover:text-accent transition-colors font-raleway">Explore <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card card-surface rounded-2xl p-7 text-center" data-aos="zoom-in" data-aos-delay="200">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-3xl">
+          <i class="bi bi-diagram-3"></i>
+        </div>
+        <h4 class="text-lg font-black font-mulish heading-text mb-3">System Analysis</h4>
+        <p class="body-text text-sm leading-relaxed mb-5">Analyzing requirements and designing structured system architectures that scale effectively.</p>
+        <a href="#resume" class="inline-flex items-center gap-1 text-sm font-bold heading-text hover:text-accent transition-colors font-raleway">Explore <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card card-surface rounded-2xl p-7 text-center" data-aos="zoom-in" data-aos-delay="300">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-3xl">
+          <i class="bi bi-git"></i>
+        </div>
+        <h4 class="text-lg font-black font-mulish heading-text mb-3">Version Control</h4>
+        <p class="body-text text-sm leading-relaxed mb-5">Managing codebases using Git and collaborative workflows for team-based software development.</p>
+        <a href="#resume" class="inline-flex items-center gap-1 text-sm font-bold heading-text hover:text-accent transition-colors font-raleway">Explore <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card card-surface rounded-2xl p-7 text-center" data-aos="zoom-in" data-aos-delay="400">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-xl bg-accent/10 flex items-center justify-center text-accent text-3xl">
+          <i class="bi bi-lightbulb"></i>
+        </div>
+        <h4 class="text-lg font-black font-mulish heading-text mb-3">Problem Solving</h4>
+        <p class="body-text text-sm leading-relaxed mb-5">Breaking down complex technical challenges into structured, logical, and elegant solutions.</p>
+        <a href="#resume" class="inline-flex items-center gap-1 text-sm font-bold heading-text hover:text-accent transition-colors font-raleway">Explore <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- CTA box -->
+    <div class="mt-14" data-aos="fade-up" data-aos-delay="200">
+      <div class="cta-box p-10 sm:p-14">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-black font-mulish text-accent mb-3">Let's Build Something Together</h3>
+            <p class="body-text text-sm max-w-lg">Looking for a dedicated developer for your project, internship, or collaboration? I'm open to exciting opportunities.</p>
+          </div>
+          <a href="#contact" class="btn-primary-accent px-10 py-4 font-mulish text-sm whitespace-nowrap flex-shrink-0">Start a Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact" class="section-bg py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <span class="inline-block text-accent text-xs font-semibold tracking-widest uppercase font-raleway subtitle-line mb-6">Contact</span>
+      <h2 class="text-4xl sm:text-5xl font-black font-mulish heading-text font-light">Get In <span class="font-black">Touch</span></h2>
+      <p class="mt-4 text-base max-w-xl mx-auto body-text">Have a project idea or want to collaborate? I'd love to hear from you.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
+      <!-- Info -->
+      <div class="lg:col-span-2 space-y-5" data-aos="fade-right" data-aos-delay="100">
+        <div class="card-surface detail-card rounded-2xl p-5 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+            <i class="bi bi-geo-alt text-accent text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold font-mulish heading-text">Location</h3>
+            <p class="text-sm body-text">Kenya</p>
+          </div>
+        </div>
+        <div class="card-surface detail-card rounded-2xl p-5 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+            <i class="bi bi-telephone text-accent text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold font-mulish heading-text">Phone</h3>
+            <p class="text-sm body-text">0799 631 645</p>
+          </div>
+        </div>
+        <div class="card-surface detail-card rounded-2xl p-5 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+            <i class="bi bi-envelope text-accent text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold font-mulish heading-text">Email</h3>
+            <p class="text-sm body-text">Valpam703@gmail.com</p>
+          </div>
+        </div>
+        <div class="card-surface detail-card rounded-2xl p-5 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+            <i class="bi bi-whatsapp text-accent text-xl"></i>
+          </div>
+          <div>
+             <a href="https://wa.me/254799631645?text=Hello%20I%20am%20interested" target="_blank">
+            <h3 class="text-base font-bold font-mulish heading-text">+254-799 631 645</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="lg:col-span-3" data-aos="fade-left" data-aos-delay="100">
+        <div class="card-surface rounded-2xl p-8">
+          <form class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <input type="text" class="form-input" placeholder="Your Name" required>
+              <input type="email" class="form-input" placeholder="Your Email" required>
+            </div>
+            <input type="text" class="form-input" placeholder="Subject" required>
+            <textarea class="form-input" rows="5" placeholder="Write your message here..." required></textarea>
+            <div class="text-center">
+              <button type="submit" class="btn-primary-accent px-12 py-3 font-mulish text-sm">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer-bg pt-14 pb-0">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/5">
+      <!-- About -->
+      <div class="lg:col-span-2">
+        <div class="sitename text-2xl font-black font-mulish mb-4">PAG</div>
+        <p class="body-text text-sm leading-relaxed mb-6 max-w-sm">
+          Computer Science student at Moi University passionate about building secure, elegant systems and contributing to meaningful technology projects.
+        </p>
+        <div class="flex gap-3">
+          <a href="https://github.com/valpam703-beep/E-portfolio" class="w-10 h-10 rounded-xl flex items-center justify-center bg-white/5 body-text hover:bg-accent hover:text-black transition-all duration-300" target="_blank"><i class="bi bi-github"></i></a>
+          <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center bg-white/5 body-text hover:bg-accent hover:text-black transition-all duration-300"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center bg-white/5 body-text hover:bg-accent hover:text-black transition-all duration-300"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://wa.me/254799631645?text=Hello%20I%20am%20interested" target="_blank" class="w-10 h-10 rounded-xl flex items-center justify-center bg-white/5 body-text hover:bg-accent hover:text-black transition-all duration-300">
+           <i class="bi bi-whatsapp"></i> 
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick links -->
+      <div>
+        <h4 class="text-sm font-black font-mulish heading-text mb-5 uppercase tracking-wider">Quick Links</h4>
+        <ul class="space-y-3">
+          <li><a href="#hero" class="text-sm body-text hover:text-accent transition-colors">Home</a></li>
+          <li><a href="#about" class="text-sm body-text hover:text-accent transition-colors">About</a></li>
+          <li><a href="#services" class="text-sm body-text hover:text-accent transition-colors">Services</a></li>
+          <li><a href="#resume" class="text-sm body-text hover:text-accent transition-colors">Education</a></li>
+          <li><a href="#contact" class="text-sm body-text hover:text-accent transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact info -->
+      <div>
+        <h4 class="text-sm font-black font-mulish heading-text mb-5 uppercase tracking-wider">Contact Info</h4>
+        <ul class="space-y-3">
+          <li class="text-sm body-text">Kenya</li>
+          <li class="text-sm body-text">0799 631 645</li>
+          <li class="text-sm body-text">Valpam703@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="py-6 text-center">
+      <p class="text-sm body-text">© <span class="text-accent font-semibold">Pamela Atieno Gor</span> · All Rights Reserved</p>
+      <p class="text-xs muted-text mt-1">BSc. Computer Science · Moi University</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ SCROLL TOP ══ -->
+<a href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- ══ AOS ══ -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
